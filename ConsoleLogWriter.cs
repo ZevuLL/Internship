@@ -10,7 +10,6 @@ namespace Logg
         private void ReturnColorConsole() => Console.ForegroundColor = ccb;
         public void Write(AppEvent appEvent)
         {
-             //var ccb = Console.ForegroundColor;
             if (appEvent.Level.ToString() == "Error")
             {
                 ChangeColorConsole(12);
@@ -35,26 +34,6 @@ namespace Logg
                 Console.WriteLine($"{appEvent.EventTime.ToLongTimeString()} {appEvent.EventTime.ToShortDateString()} | {appEvent.Level} | {appEvent.Message}");
                 ReturnColorConsole();
             }
-
-            //цвета тут, и форматирование строк(расстояне)
-            //Console.WriteLine($"{appEvent.EventTime.ToLongTimeString()} {appEvent.EventTime.ToLongDateString()} | {appEvent.Level} | {appEvent.Message}");
         }
     }
-    /*
-    ## Split up the task:
-
-    ILog - interface for using in services
-    Logger - class, describes logger
-
-    - create the logger based on the logging setting
-    - create an event description object -> class Logger : ILog
-    - class AppEvent -> attributes: EventTime, Level, Message
-    - write to file
-    - write to console
-
-    Logger
-    AppEvent: EventTime, Level, Message
-    ILogWriter
-
-    */
 }

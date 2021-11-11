@@ -4,7 +4,6 @@ using System;
 
 namespace Logg
 {
-    // A sample class to test logger usage.
     public class MyService
     {
         private readonly ILog logger;
@@ -20,9 +19,6 @@ namespace Logg
             logger.Info("Info message sample.");
             logger.Warning("Warning message sample.");
             logger.Error("Error message sample.");
-
-
-            // A sample for logger usage for writing Exception details:
 
             try
             {

@@ -4,8 +4,6 @@ using System.Collections.Generic;
 
 namespace Logg
 {
-    // A simplified logger configuration class.
-    // For now let's create it in-code instead of loading the settings from a file.
     class LoggerSettings
     {
         public LoggerSettings()
